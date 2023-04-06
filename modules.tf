@@ -27,4 +27,5 @@ module "eks_aws_lb_controller" {
   project_name = var.project_name
   tags         = local.tags
   oidc         = module.eks_cluster.oidc
+  cluster_name = module.eks_cluster.cluster_name
 }

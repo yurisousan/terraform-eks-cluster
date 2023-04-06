@@ -12,3 +12,8 @@ variable "oidc" {
   type        = string
   description = "HTTPS URL from OIDC provider of EKS Cluster"
 }
+
+variable "cluster_name" {
+  type        = string
+  description = "Cluster Name"
+}
