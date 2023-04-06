@@ -8,4 +8,4 @@ repos:
       - id: terraform_validate
       - id: terraform_docs
         args:
-          - --args=--output-file READM.md
+          - --args=--output-file README.md
