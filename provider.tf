@@ -13,15 +13,10 @@ terraform {
       version = "2.9.0"
     }
   }
-  backend "s3" {
-    bucket = "commn-devops"
-    key    = "dev/terraform.tfstate"
-    region = "us-east-1"
-  }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 provider "kubernetes" {
@@ -44,5 +39,4 @@ provider "helm" {
       command     = "aws"
     }
   }
-
 }
