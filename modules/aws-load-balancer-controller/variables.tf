@@ -17,3 +17,9 @@ variable "cluster_name" {
   type        = string
   description = "Cluster Name"
 }
+
+variable "vpc_id" {
+  type        = string
+  description = "VPC ID for LBC to use"
+}
+

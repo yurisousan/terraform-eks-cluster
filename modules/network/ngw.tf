@@ -49,7 +49,7 @@ resource "aws_nat_gateway" "eks_ngw_1b" {
 }
 
 resource "aws_route_table" "eks_priv_rt_1a" {
-  vpc_id = var.vpc_cidr
+  vpc_id = aws_vpc.eks_vpc.id
 
   route {
     cidr_block     = "0.0.0.0/0"
@@ -66,7 +66,7 @@ resource "aws_route_table" "eks_priv_rt_1a" {
 }
 
 resource "aws_route_table" "eks_priv_rt_1b" {
-  vpc_id = var.vpc_cidr
+  vpc_id = aws_vpc.eks_vpc.id
 
   route {
     cidr_block     = "0.0.0.0/0"

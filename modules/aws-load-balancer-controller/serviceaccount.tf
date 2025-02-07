@@ -6,4 +6,5 @@ resource "kubernetes_service_account" "eks_Controller_sa" {
       "eks.amazonaws.com/role-arn" = aws_iam_role.eks_controller_role.arn
     }
   }
+  automount_service_account_token = true
 }
